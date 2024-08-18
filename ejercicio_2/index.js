@@ -1,4 +1,4 @@
-import eliminarProducto from "./ejercicio_5.js";
+import eliminarProducto from './ejercicio_5.js';
 
 // 1. Recuperar la información de todos los productos (products).
 
