@@ -1,12 +1,12 @@
 // 4.C)Eliminar personajes con ID mayor a 25 y sobrescribir el archivo JSON(tronos.json)
+const fs = require('fs');
 function deleteCharactersById() {
-    let data = JSON.parse(fs.readFileSync('thrones_data.json'));
+  let data = JSON.parse(fs.readFileSync('tronos.json'));
 
-    data = data.filter(character => character.id <= 25);
+  let filteredData = data.filter((character) => character.id <= 25);
 
-    fs.writeFileSync('thrones_data.json', JSON.stringify(data, null, 4));
-    console.log('Personajes con id mayor a 25 eliminadoso.');
+  fs.writeFileSync('tronos.json', JSON.stringify(filteredData, null, 4));
+  console.log('Personajes con id mayor a 25 eliminados.');
 }
-
 
 deleteCharactersById();
