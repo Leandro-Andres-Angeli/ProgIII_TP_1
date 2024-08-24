@@ -3,6 +3,9 @@ function eliminarProducto(id) {
     method: 'DELETE',
   })
     .then((res) => {
+      if (!res.ok) {
+        throw Error(`Error ${res.status}`);
+      }
       return res.json();
     })
     .then((json) => {
