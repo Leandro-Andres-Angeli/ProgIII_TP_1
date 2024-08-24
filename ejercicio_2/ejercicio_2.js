@@ -1,19 +1,17 @@
 //Recuperar la información de un número limitado de productos (products).
 
-const urlApi = 'https://fakestoreapi.com/products?limit=10'
+const urlApi = 'https://fakestoreapi.com/products?limit=10';
 
-
-fetch (urlApi)
-.then(response => {
-    console.log(response);
-    if(!response.ok){
-        throw Error ('Error', error.status)
+fetch(urlApi)
+  .then((response) => {
+    if (!response.ok) {
+      throw Error('Error', response.status);
     }
     return response.json();
-})
-.then((datos)=>{
+  })
+  .then((datos) => {
     console.log(datos);
-})
-.catch(error => {
+  })
+  .catch((error) => {
     console.log(error);
-})
+  });

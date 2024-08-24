@@ -1,6 +1,6 @@
 //Agregar un nuevo producto (product).
 
-const urlApi = 'https://fakestoreapi.com/products';
+const urlApi = 'https://fakestowreapi.com/products';
 
 async function agregarProducto(objeto) {
   try {
@@ -8,6 +8,7 @@ async function agregarProducto(objeto) {
       method: 'POST',
       body: JSON.stringify(objeto),
     });
+
     if (!response.ok) {
       throw new Error('error', response.status);
     }
