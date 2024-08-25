@@ -3,14 +3,14 @@ function eliminarProducto(id) {
     method: 'DELETE',
   })
     .then((res) => {
-      if (!res.ok) {
+      if (res.status !== 200) {
         throw Error(`Error ${res.status}`);
       }
       return res.json();
     })
     .then((json) => {
-      if (!json) {
-        throw Error('Ocurrió un error');
+      if (json === null) {
+        throw Error('Producto no encontrado');
       }
 
       console.log(`El producto con id: ${json.id} se eliminó exitosamente`);
@@ -20,4 +20,4 @@ function eliminarProducto(id) {
     });
 }
 
-eliminarProducto(99);
+eliminarProducto(1);

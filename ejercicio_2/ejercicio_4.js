@@ -10,10 +10,15 @@ async function agregarProducto(id) {
       throw new Error(`Error ${response.status} ${response.statusText}`);
     }
 
-    const datos = await response.json();
-    console.log(datos);
+    let datos;
+    try {
+      datos = await response.json();
+      console.log(datos);
+    } catch (err) {
+      throw Error('Producto no encontrado');
+    }
   } catch (error) {
     console.log(error.message);
   }
 }
-agregarProducto(5);
+agregarProducto(99);
