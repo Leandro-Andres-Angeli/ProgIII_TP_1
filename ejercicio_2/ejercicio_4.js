@@ -2,7 +2,7 @@
 
 const urlApi = 'https://fakestoreapi.com/products';
 
-async function agregarProducto(id) {
+async function obtenerProducto(id) {
   try {
     const response = await fetch(urlApi + '/' + id);
 
@@ -21,4 +21,4 @@ async function agregarProducto(id) {
     console.log(error.message);
   }
 }
-agregarProducto(99);
+obtenerProducto(99);
