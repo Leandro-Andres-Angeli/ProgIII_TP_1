@@ -21,4 +21,4 @@ async function obtenerProducto(id) {
     console.log(error.message);
   }
 }
-obtenerProducto(99);
+module.exports = obtenerProducto;

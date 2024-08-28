@@ -1,6 +1,6 @@
 function eliminarProducto(id) {
   fetch(`https://fakestoreapi.com/products/${id}`, {
-    method: "DELETE",
+    method: 'DELETE',
   })
     .then((res) => {
       if (res.status !== 200) {
@@ -10,7 +10,7 @@ function eliminarProducto(id) {
     })
     .then((json) => {
       if (json === null) {
-        throw Error("Producto no encontrado");
+        throw Error('Producto no encontrado');
       }
 
       console.log(`El producto con id: ${json.id} se eliminó exitosamente`);
@@ -20,4 +20,4 @@ function eliminarProducto(id) {
     });
 }
 
-eliminarProducto(1);
+module.exports = eliminarProducto;
