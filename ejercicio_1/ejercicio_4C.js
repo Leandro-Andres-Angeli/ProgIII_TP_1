@@ -9,4 +9,4 @@ function deleteCharactersById() {
   console.log('Personajes con id mayor a 25 eliminados.');
 }
 
-deleteCharactersById();
+module.exports = deleteCharactersById;

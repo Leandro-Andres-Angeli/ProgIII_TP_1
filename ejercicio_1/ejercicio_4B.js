@@ -17,7 +17,7 @@ function addNewCharacter() {
   data.push(newCharacter);
 
   fs.writeFileSync('tronos.json', JSON.stringify(data, null, 4));
-  console.log('Nuevo personaje');
+  console.log('Nuevo personaje agregado');
 }
 
-addNewCharacter();
+module.exports = addNewCharacter;

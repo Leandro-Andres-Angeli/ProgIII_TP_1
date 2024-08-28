@@ -11,4 +11,4 @@ function showStarkCharacters() {
   });
 }
 
-showStarkCharacters();
+module.exports = showStarkCharacters;
